@@ -7,8 +7,8 @@ const Layout = () => {
     <>
       <Header>
         <nav>
-          <Link to={'/'}>Home</Link>
-          <Link to={'/tweets'}>Tweets</Link>
+          <Link to="/">Home</Link>
+          <Link to="/tweets">Tweets</Link>
         </nav>
       </Header>
       <main>

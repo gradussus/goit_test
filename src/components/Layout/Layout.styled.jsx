@@ -8,5 +8,8 @@ export const Header = styled.header`
 `;
 export const Link = styled(NavLink)`
   margin: 10px;
-  color: black;
+  text-decoration: none;
+  &.active {
+    text-decoration: underline;
+  }
 `;
