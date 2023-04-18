@@ -7,13 +7,29 @@ const TweetsList = () => {
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(1);
-  const [allUsers, setAllUsers] = useState(fetchAllUsers().length);
+  const [allUsers, setAllUsers] = useState(fetchAllUsers());
 
   const loadMore = () => {
     setPage(prevState => prevState + 1);
+    console.log(allUsers);
   };
+  // useEffect(() => {
+  //   setIsLoading(true);
+  //   const goTweets = async () => {
+  //     try {
+  //       await fetchAllUsers().then(res => {
+  //         setAllUsers(() => res.data);
+  //       });
+  //     } catch (e) {
+  //       console.log(e);
+  //     }
+  //   };
+  //   goTweets();
+  //   setIsLoading(false);
+  // }, []);
 
   useEffect(() => {
+    setIsLoading(true);
     const goTweets = async () => {
       try {
         await fetchUsers(page).then(res => {
@@ -45,9 +61,7 @@ const TweetsList = () => {
                 />
               ))}
           </List>
-          {allUsers < items.length && (
-            <button onClick={loadMore}>Load More</button>
-          )}
+          <button onClick={loadMore}>Load More</button>
         </>
       )}
     </>

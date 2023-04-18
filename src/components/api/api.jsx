@@ -6,7 +6,9 @@ const fetchUsers = (page = 1) => {
   return axios.get(`/?&limit=8&page=${page}`);
 };
 const fetchAllUsers = () => {
-  return axios.get();
+  const lool = axios.get().then(res => res.data);
+  console.log(lool);
+  return lool;
 };
 const unfollow = (id, followers) => {
   return axios.put(`/${id}`, {
