@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import bcg from '../../images/bcg.png';
 
 export const Item = styled.li`
   position: relative;
@@ -19,7 +20,7 @@ export const PictureBox = styled.div`
   margin-left: 36px;
   margin-right: 36px;
   height: 168px;
-  background-image: url('../../images/bcg.png');
+  background-image: url(${bcg});
   background-repeat: no-repeat;
   background-size: contain;
 `;
