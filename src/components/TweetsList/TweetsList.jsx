@@ -25,7 +25,6 @@ const TweetsList = () => {
     <>
       {!isLoading && (
         <List>
-          {console.log(items)}
           {items &&
             items.map(({ avatar, user, id, tweets, followers }) => (
               <Tweet

@@ -74,3 +74,26 @@ export const StatsList = styled.ul`
   font-size: 20px;
   color: #ebd8ff;
 `;
+export const Button = styled.button`
+  margin-top: 26px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 42px;
+  width: 196px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+  color: #373737;
+  border-radius: 10.3108px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+`;
+export const FollowButton = styled(Button)`
+  background: #5cd3a8;
+`;
+export const UnfollowButton = styled(Button)`
+  background: #ebd8ff;
+`;
