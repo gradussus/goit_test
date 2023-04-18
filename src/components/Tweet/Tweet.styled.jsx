@@ -14,8 +14,19 @@ export const Item = styled.li`
   );
   box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
   border-radius: 20px;
+  ::before {
+    content: ' ';
+    top: 214px;
+    left: 0;
+    position: absolute;
+    height: 8px;
+    width: 100%;
+    background: #EBD8FF;
+    box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06),
+    inset 0px -2.19582px 4.39163px #ae7be3,
+    inset 0px 4.39163px 3.29372px #fbf8ff;
 `;
-export const PictureBox = styled.div`
+export const ItemBcg = styled.div`
   margin-top: 28px;
   margin-left: 36px;
   margin-right: 36px;
@@ -23,4 +34,17 @@ export const PictureBox = styled.div`
   background-image: url(${bcg});
   background-repeat: no-repeat;
   background-size: contain;
+`;
+export const AvaBorder = styled.div`
+  position: absolute;
+  top: 178px;
+  left: 150px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #ebd8ff;
+  z-index: 1;
+  box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06),
+    inset 0px -2.19582px 4.39163px #ae7be3,
+    inset 0px 4.39163px 3.29372px #fbf8ff;
 `;
