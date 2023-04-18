@@ -14,3 +14,12 @@ export const Item = styled.li`
   box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
   border-radius: 20px;
 `;
+export const PictureBox = styled.div`
+  margin-top: 28px;
+  margin-left: 36px;
+  margin-right: 36px;
+  height: 168px;
+  background-image: ('../../images/bcg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+`;

@@ -1,5 +1,5 @@
 import Logo from '../../images/goit.svg';
-import { Item } from './Tweet.styled';
+import { Item, PictureBox } from './Tweet.styled';
 
 const Tweet = ({ id, name, tweets, avatar }) => {
   return (
@@ -9,6 +9,7 @@ const Tweet = ({ id, name, tweets, avatar }) => {
         alt="React Logo"
         style={{ position: 'absolute', top: '20px', left: '20px' }}
       />
+      <PictureBox />
     </Item>
   );
 };
