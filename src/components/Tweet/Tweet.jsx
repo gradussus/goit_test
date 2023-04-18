@@ -10,8 +10,8 @@ import {
   UnfollowButton,
 } from './Tweet.styled';
 import DefaultAvatar from '../../images/defaultAvatar.png';
-import axios from 'axios';
 import { useState } from 'react';
+import { unfollow, follow } from 'components/api/api';
 
 const addToLocalStorage = ID => {
   const str = JSON.parse(localStorage.getItem('follows')) || [];
@@ -38,12 +38,12 @@ const Tweet = ({ id, name, tweets, avatar, followers }) => {
   const followClick = async () => {
     try {
       setIsClick(true);
-      await axios.put(`/${id}`, {
-        followers: followers + 1,
-      });
+
+      await follow(id, followers);
       addToLocalStorage(id);
       setIsFollow(true);
       setCount(prevState => prevState + 1);
+
       setIsClick(false);
     } catch (err) {
       console.log(err);
@@ -52,12 +52,12 @@ const Tweet = ({ id, name, tweets, avatar, followers }) => {
   const unfollowClick = async () => {
     try {
       setIsClick(true);
-      await axios.put(`/${id}`, {
-        followers: followers - 1,
-      });
+
+      await unfollow(id, followers);
       deleteFromLocalStorage(id);
       setIsFollow(false);
       setCount(prevState => prevState - 1);
+
       setIsClick(false);
     } catch (err) {
       console.log(err);

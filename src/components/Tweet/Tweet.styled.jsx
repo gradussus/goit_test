@@ -90,6 +90,10 @@ export const Button = styled.button`
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
+  transition: transform 300ms ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 export const FollowButton = styled(Button)`
   background: #5cd3a8;

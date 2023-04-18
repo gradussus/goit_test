@@ -1,13 +1,7 @@
 import TweetsList from '../components/TweetsList/TweetsList';
 
 const Tweets = () => {
-  return (
-    <>
-      <h1>TweetsList</h1>
-      <TweetsList></TweetsList>
-      <button>Load More</button>
-    </>
-  );
+  return <TweetsList></TweetsList>;
 };
 
 export default Tweets;
