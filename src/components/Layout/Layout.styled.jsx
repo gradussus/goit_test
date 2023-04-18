@@ -14,7 +14,7 @@ export const Link = styled(NavLink)`
   }
 `;
 export const Main = styled.main`
-  width: 1200px;
+  width: 1800px;
   margin-right: auto;
   margin-left: auto;
 `;

@@ -1,11 +1,15 @@
+import Logo from '../../images/goit.svg';
+import { Item } from './Tweet.styled';
+
 const Tweet = ({ id, name, tweets, avatar }) => {
   return (
-    <li>
-      <>{id}</>
-      <div className="App">
-        <img src="../../images/goit.svg" alt="React Logo" />
-      </div>
-    </li>
+    <Item>
+      <img
+        src={Logo}
+        alt="React Logo"
+        style={{ position: 'absolute', top: '20px', left: '20px' }}
+      />
+    </Item>
   );
 };
 

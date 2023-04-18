@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { fetchUsers } from '../api/api';
 import Tweet from 'components/Tweet/Tweet';
+import { List } from './TweetsList.styled';
 
 const TweetsList = () => {
   const [items, setItems] = useState([]);
@@ -23,7 +24,7 @@ const TweetsList = () => {
   return (
     <>
       {!isLoading && (
-        <ul>
+        <List>
           {console.log(items)}
           {items &&
             items.map(({ avatar, user, id, tweets }) => (
@@ -35,7 +36,7 @@ const TweetsList = () => {
                 user={user}
               />
             ))}
-        </ul>
+        </List>
       )}
     </>
   );
