@@ -19,7 +19,7 @@ export const PictureBox = styled.div`
   margin-left: 36px;
   margin-right: 36px;
   height: 168px;
-  background-image: ('../../images/bcg.png');
+  background-image: url('../../images/bcg.png');
   background-repeat: no-repeat;
   background-size: contain;
 `;
