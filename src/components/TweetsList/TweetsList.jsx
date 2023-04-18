@@ -27,13 +27,14 @@ const TweetsList = () => {
         <List>
           {console.log(items)}
           {items &&
-            items.map(({ avatar, user, id, tweets }) => (
+            items.map(({ avatar, user, id, tweets, followers }) => (
               <Tweet
                 key={id}
                 id={id}
                 tweets={tweets}
                 avatar={avatar}
                 user={user}
+                followers={followers}
               />
             ))}
         </List>

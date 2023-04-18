@@ -37,6 +37,9 @@ export const ItemBcg = styled.div`
 `;
 export const AvaBorder = styled.div`
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 178px;
   left: 150px;
   width: 80px;
@@ -47,4 +50,27 @@ export const AvaBorder = styled.div`
   box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06),
     inset 0px -2.19582px 4.39163px #ae7be3,
     inset 0px 4.39163px 3.29372px #fbf8ff;
+`;
+export const Avatar = styled.img`
+  background: #5736a3;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+`;
+export const Info = styled.div`
+  position: absolute;
+  width: 100%;
+  text-transform: uppercase;
+  top: 284px;
+  margin-left: auto;
+  margin-right: auto;
+`;
+export const StatsList = styled.ul`
+  display: block;
+  padding-left: 0px;
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  color: #ebd8ff;
 `;

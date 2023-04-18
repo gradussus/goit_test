@@ -1,7 +1,16 @@
 import Logo from '../../images/goit.svg';
-import { Item, ItemBcg, AvaBorder } from './Tweet.styled';
+import {
+  Item,
+  ItemBcg,
+  AvaBorder,
+  Avatar,
+  Info,
+  StatsList,
+  StatsItem,
+} from './Tweet.styled';
+import DefaultAvatar from '../../images/defaultAvatar.png';
 
-const Tweet = ({ id, name, tweets, avatar }) => {
+const Tweet = ({ id, name, tweets, avatar, followers }) => {
   return (
     <Item>
       <img
@@ -10,7 +19,15 @@ const Tweet = ({ id, name, tweets, avatar }) => {
         style={{ position: 'absolute', top: '20px', left: '20px' }}
       />
       <ItemBcg />
-      <AvaBorder></AvaBorder>
+      <AvaBorder>
+        <Avatar src={avatar || DefaultAvatar} alt="Avatar"></Avatar>
+      </AvaBorder>
+      <Info>
+        <StatsList>
+          <li>{tweets} tweets</li>
+          <li style={{ marginTop: 16 }}>{followers} followers</li>
+        </StatsList>
+      </Info>
     </Item>
   );
 };
