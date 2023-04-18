@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-import { Link, Header } from './Layout.styled';
+import { Link, Header, Main } from './Layout.styled';
 
 const Layout = () => {
   return (
@@ -11,11 +11,11 @@ const Layout = () => {
           <Link to="/tweets">Tweets</Link>
         </nav>
       </Header>
-      <main>
+      <Main>
         <Suspense>
           <Outlet />
         </Suspense>
-      </main>
+      </Main>
     </>
   );
 };

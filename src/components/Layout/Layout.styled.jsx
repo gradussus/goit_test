@@ -13,3 +13,8 @@ export const Link = styled(NavLink)`
     text-decoration: underline;
   }
 `;
+export const Main = styled.main`
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+`;
